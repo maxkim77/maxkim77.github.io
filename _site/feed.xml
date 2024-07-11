@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-07-11T17:02:44+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Max Note</title><subtitle>An amazing website.</subtitle><author><name>Max</name><email>maxkim7723@gmail.com</email></author><entry><title type="html">첫 제목</title><link href="http://localhost:4000/first/" rel="alternate" type="text/html" title="첫 제목" /><published>2024-07-09T00:00:00+09:00</published><updated>2024-07-09T00:00:00+09:00</updated><id>http://localhost:4000/first</id><content type="html" xml:base="http://localhost:4000/first/"><![CDATA[<h1 id="오늘-처음-블로그">오늘 처음 블로그</h1>
+
+<p><img src="C:\Users\User\Downloads\초록색%20심플한%20블로그%20챌린지%20인스타그램%20포스트.png" alt="열" />심</p>
+
+<p>@</p>
+
+<p><img src="/images/2024-07-09-first/HTMLCSSJS.png" alt=" vv " /></p>
+
+<p><img src="" alt=" ff" /></p>
+
+<p><img src="C:\Users\User\Downloads\HTMLCSSJS.png" alt="" /></p>
+
+<p>@</p>]]></content><author><name>Max</name><email>maxkim7723@gmail.com</email></author><summary type="html"><![CDATA[오늘 처음 블로그]]></summary></entry></feed>
