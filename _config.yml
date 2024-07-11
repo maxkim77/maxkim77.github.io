@@ -150,6 +150,7 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: https://github.com/maxkim77
+
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url:
@@ -311,10 +312,10 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: single
+      layout: default
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true
       show_data: true
