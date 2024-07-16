@@ -11,9 +11,9 @@ var store = [{
         "url": "/cs/CSQuiz1/",
         "teaser": null
       },{
-        "title": "[CS] Frequently Used SQL syntax",
-        "excerpt":"Q. What SQL statement is used to retrieve data from a database? A. The SELECT statement is used to fetch data from one or more tables in a database. SELECT * FROM table_name; Q. How do you insert new data into a table named customers with columns name and email?...","categories": ["CS"],
-        "tags": ["CS","Knowledge","Quiz","SQL"],
-        "url": "/cs/SQL/",
+        "title": null,
+        "excerpt":"Q. What SQL statement is used to retrieve data from a database? A. The SELECT statement is used to fetch data from one or more tables in a database. SELECT * FROM table_name; Q. How do you insert new data into a table named customers with columns name and email?...","categories": [],
+        "tags": null,
+        "url": "/2024-07-16-SQL/",
         "teaser": null
       }]

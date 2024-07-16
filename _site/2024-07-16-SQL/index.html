@@ -10,8 +10,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[CS] Frequently Used SQL syntax - Max Note</title>
-<meta name="description" content="">
+<!-- begin _includes/seo.html --><title>Max Note - Max Note</title>
+<meta name="description" content="An amazing website.">
 
 
   <meta name="author" content="Max">
@@ -23,30 +23,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Max Note">
-<meta property="og:title" content="[CS] Frequently Used SQL syntax">
-<meta property="og:url" content="http://localhost:4000/cs/SQL/">
+<meta property="og:title" content="Max Note">
+<meta property="og:url" content="http://localhost:4000/2024-07-16-SQL/">
 
 
-  <meta property="og:description" content="">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2024-07-16T00:00:00+09:00">
+  <meta property="og:description" content="An amazing website.">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2024-07-16T17:20:49+09:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="http://localhost:4000/cs/SQL/">
+
+<link rel="canonical" href="http://localhost:4000/2024-07-16-SQL/">
 
 
 
@@ -158,17 +158,7 @@
         <span class="sep">/</span>
       
       
-        
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/categories/#cs" itemprop="item"><span itemprop="name">Cs</span></a>
-          <meta itemprop="position" content="2" />
-        </li>
-        <span class="sep">/</span>
-      
-    
-      
-      
-        <li class="current">[CS] Frequently Used SQL syntax</li>
+        <li class="current"></li>
       
     
   </ol>
@@ -298,18 +288,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[CS] Frequently Used SQL syntax">
+    
     <meta itemprop="description" content="">
-    <meta itemprop="datePublished" content="2024-07-16T00:00:00+09:00">
+    <meta itemprop="datePublished" content="2024-07-16T17:20:49+09:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">
-            <a href="http://localhost:4000/cs/SQL/" itemprop="url">[CS] Frequently Used SQL syntax
-</a>
-          </h1>
+          
           
 
   <p class="page__meta">
@@ -335,13 +322,6 @@
       
 
       <section class="page__content" itemprop="text">
-        
-          <aside class="sidebar__right ">
-            <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#essential-sql-syntax-patterns-for-everyday-use">Essential SQL Syntax Patterns for Everyday Use</a><ul><li><a href="#creating-an-index">Creating an Index</a></li><li><a href="#updating-data-with-conditions">Updating Data with Conditions</a></li><li><a href="#joining-data-from-multiple-tables">Joining Data from Multiple Tables</a></li><li><a href="#inserting-data-into-a-table">Inserting Data into a Table</a></li><li><a href="#creating-a-view">Creating a View</a></li><li><a href="#altering-table-structure">Altering Table Structure</a></li><li><a href="#ordering-results">Ordering Results</a></li><li><a href="#calculating-rankings">Calculating Rankings</a></li></ul></li></ul>
-            </nav>
-          </aside>
         
         <p><img src="/assets/images/2024-07-11-CSQuiz1/quiz.png" alt="CSQuiz" /></p>
 
@@ -375,7 +355,7 @@
 
 <h3 id="creating-an-index">Creating an Index</h3>
 
-<p>Indexes enhance query performance by providing quick access to rows in a table. Use the following syntax to create an index:</p>
+<p>Indexes enhance query performance by providing quick access to rows in a table. Use the following syntax to create an index.</p>
 
 <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="k">INDEX</span> <span class="n">index_name</span>
 <span class="k">ON</span> <span class="k">table_name</span> <span class="p">(</span><span class="k">column_name</span><span class="p">);</span>
@@ -383,7 +363,7 @@
 
 <h3 id="updating-data-with-conditions">Updating Data with Conditions</h3>
 
-<p>Update specific rows in a table based on certain conditions using UPDATE with SET and WHERE clauses:</p>
+<p>Update specific rows in a table based on certain conditions using UPDATE with SET and WHERE clauses.</p>
 
 <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">UPDATE</span> <span class="k">table_name</span>
 <span class="k">SET</span> <span class="n">column1</span> <span class="o">=</span> <span class="n">value1</span><span class="p">,</span> <span class="n">column2</span> <span class="o">=</span> <span class="n">value2</span><span class="p">,</span> <span class="p">...</span>
@@ -407,14 +387,14 @@
 <span class="k">LEFT</span> <span class="k">JOIN</span> <span class="n">table2</span> <span class="k">ON</span> <span class="n">table1</span><span class="p">.</span><span class="k">column_name</span> <span class="o">=</span> <span class="n">table2</span><span class="p">.</span><span class="k">column_name</span><span class="p">;</span>
 </code></pre></div></div>
 
-<p>Right Join retrieves all rows from the right table and matching rows from the left table:</p>
+<p>Right Join retrieves all rows from the right table and matching rows from the left table.</p>
 
 <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">columns</span>
 <span class="k">FROM</span> <span class="n">table1</span>
 <span class="k">RIGHT</span> <span class="k">JOIN</span> <span class="n">table2</span> <span class="k">ON</span> <span class="n">table1</span><span class="p">.</span><span class="k">column_name</span> <span class="o">=</span> <span class="n">table2</span><span class="p">.</span><span class="k">column_name</span><span class="p">;</span>
 </code></pre></div></div>
 
-<p>Full Outer Join retrieves all rows when there is a match in either table:</p>
+<p>Full Outer Join retrieves all rows when there is a match in either table.</p>
 
 <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">columns</span>
 <span class="k">FROM</span> <span class="n">table1</span>
@@ -422,14 +402,14 @@
 </code></pre></div></div>
 
 <h3 id="inserting-data-into-a-table">Inserting Data into a Table</h3>
-<p>Add new rows of data into a table using INSERT INTO:</p>
+<p>Add new rows of data into a table using INSERT INTO.</p>
 
 <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">INSERT</span> <span class="k">INTO</span> <span class="k">table_name</span> <span class="p">(</span><span class="n">column1</span><span class="p">,</span> <span class="n">column2</span><span class="p">,</span> <span class="p">...)</span>
 <span class="k">VALUES</span> <span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="n">value2</span><span class="p">,</span> <span class="p">...);</span>
 </code></pre></div></div>
 
 <h3 id="creating-a-view">Creating a View</h3>
-<p>Views are virtual tables derived from one or more base tables. Use CREATE VIEW AS to define a view:</p>
+<p>Views are virtual tables derived from one or more base tables. Use CREATE VIEW AS to define a view.</p>
 
 <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="k">VIEW</span> <span class="n">view_name</span> <span class="k">AS</span>
 <span class="k">SELECT</span> <span class="n">columns</span>
@@ -438,15 +418,15 @@
 </code></pre></div></div>
 
 <h3 id="altering-table-structure">Altering Table Structure</h3>
-<p>Modify the structure of a table using ALTER TABLE:</p>
+<p>Modify the structure of a table using ALTER TABLE.</p>
 
-<p>Adding Columns:</p>
+<p>Adding Columns.</p>
 
 <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="k">table_name</span>
 <span class="k">ADD</span> <span class="k">column_name</span> <span class="n">datatype</span><span class="p">;</span>
 </code></pre></div></div>
 <h3 id="ordering-results">Ordering Results</h3>
-<p>Sort query results in ascending or descending order using ORDER BY:</p>
+<p>Sort query results in ascending or descending order using ORDER BY.</p>
 
 <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">columns</span>
 <span class="k">FROM</span> <span class="k">table_name</span>
@@ -454,7 +434,7 @@
 </code></pre></div></div>
 
 <h3 id="calculating-rankings">Calculating Rankings</h3>
-<p>To rank rows based on certain criteria, such as scores or sales:</p>
+<p>To rank rows based on certain criteria, such as scores or sales.</p>
 
 <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">column1</span><span class="p">,</span> <span class="n">column2</span><span class="p">,</span> <span class="p">...,</span> <span class="n">RANK</span><span class="p">()</span> <span class="n">OVER</span> <span class="p">(</span><span class="k">ORDER</span> <span class="k">BY</span> <span class="n">score</span> <span class="k">DESC</span><span class="p">)</span> <span class="k">AS</span> <span class="n">rank</span>
 <span class="k">FROM</span> <span class="k">table_name</span><span class="p">;</span>
@@ -469,47 +449,11 @@ This format should be more suitable for your blog post, providing both SQL code 
       <footer class="page__meta">
         
         
-  
-
-
-  
-
-  <p class="page__taxonomy">
-    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
-    <span itemprop="keywords">
-    
-      <a href="/tags/#cs" class="page__taxonomy-item p-category" rel="tag">CS</a><span class="sep">, </span>
-    
-      <a href="/tags/#knowledge" class="page__taxonomy-item p-category" rel="tag">Knowledge</a><span class="sep">, </span>
-    
-      <a href="/tags/#quiz" class="page__taxonomy-item p-category" rel="tag">Quiz</a><span class="sep">, </span>
-    
-      <a href="/tags/#sql" class="page__taxonomy-item p-category" rel="tag">SQL</a>
-    
-    </span>
-  </p>
-
-
-
-
-  
-
-
-  
-
-  <p class="page__taxonomy">
-    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
-    <span itemprop="keywords">
-    
-      <a href="/categories/#cs" class="page__taxonomy-item p-category" rel="tag">CS</a>
-    
-    </span>
-  </p>
 
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-07-16T00:00:00+09:00">2024-07-16</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-07-16T17:20:49+09:00">2024-07-16</time></p>
 
       </footer>
 
@@ -518,11 +462,11 @@ This format should be more suitable for your blog post, providing both SQL code 
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=%5BCS%5D+Frequently+Used+SQL+syntax%20http%3A%2F%2Flocalhost%3A4000%2Fcs%2FSQL%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=%20http%3A%2F%2Flocalhost%3A4000%2F2024-07-16-SQL%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fcs%2FSQL%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2F2024-07-16-SQL%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/cs/SQL/" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2024-07-16-SQL/" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
@@ -692,8 +636,8 @@ This format should be more suitable for your blog post, providing both SQL code 
     
   <script>
     var disqus_config = function () {
-      this.page.url = "http://localhost:4000/cs/SQL/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/cs/SQL"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "http://localhost:4000/2024-07-16-SQL/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/2024-07-16-SQL"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');

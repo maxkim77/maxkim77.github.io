@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-07-16T17:17:07+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Max Note</title><subtitle>An amazing website.</subtitle><author><name>Max</name><email>maxkim7723@gmail.com</email></author><entry><title type="html">[CS] Frequently Used SQL syntax</title><link href="http://localhost:4000/cs/SQL/" rel="alternate" type="text/html" title="[CS] Frequently Used SQL syntax" /><published>2024-07-16T00:00:00+09:00</published><updated>2024-07-16T00:00:00+09:00</updated><id>http://localhost:4000/cs/SQL</id><content type="html" xml:base="http://localhost:4000/cs/SQL/"><![CDATA[<p><img src="/assets/images/2024-07-11-CSQuiz1/quiz.png" alt="CSQuiz" /></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-07-16T17:20:49+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Max Note</title><subtitle>An amazing website.</subtitle><author><name>Max</name><email>maxkim7723@gmail.com</email></author><entry><title type="html"></title><link href="http://localhost:4000/2024-07-16-SQL/" rel="alternate" type="text/html" title="" /><published>2024-07-16T17:20:49+09:00</published><updated>2024-07-16T17:20:49+09:00</updated><id>http://localhost:4000/2024-07-16-SQL</id><content type="html" xml:base="http://localhost:4000/2024-07-16-SQL/"><![CDATA[<p><img src="/assets/images/2024-07-11-CSQuiz1/quiz.png" alt="CSQuiz" /></p>
 
 <p>Q. What SQL statement is used to retrieve data from a database?</p>
 
@@ -30,7 +30,7 @@
 
 <h3 id="creating-an-index">Creating an Index</h3>
 
-<p>Indexes enhance query performance by providing quick access to rows in a table. Use the following syntax to create an index:</p>
+<p>Indexes enhance query performance by providing quick access to rows in a table. Use the following syntax to create an index.</p>
 
 <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="k">INDEX</span> <span class="n">index_name</span>
 <span class="k">ON</span> <span class="k">table_name</span> <span class="p">(</span><span class="k">column_name</span><span class="p">);</span>
@@ -38,7 +38,7 @@
 
 <h3 id="updating-data-with-conditions">Updating Data with Conditions</h3>
 
-<p>Update specific rows in a table based on certain conditions using UPDATE with SET and WHERE clauses:</p>
+<p>Update specific rows in a table based on certain conditions using UPDATE with SET and WHERE clauses.</p>
 
 <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">UPDATE</span> <span class="k">table_name</span>
 <span class="k">SET</span> <span class="n">column1</span> <span class="o">=</span> <span class="n">value1</span><span class="p">,</span> <span class="n">column2</span> <span class="o">=</span> <span class="n">value2</span><span class="p">,</span> <span class="p">...</span>
@@ -62,14 +62,14 @@
 <span class="k">LEFT</span> <span class="k">JOIN</span> <span class="n">table2</span> <span class="k">ON</span> <span class="n">table1</span><span class="p">.</span><span class="k">column_name</span> <span class="o">=</span> <span class="n">table2</span><span class="p">.</span><span class="k">column_name</span><span class="p">;</span>
 </code></pre></div></div>
 
-<p>Right Join retrieves all rows from the right table and matching rows from the left table:</p>
+<p>Right Join retrieves all rows from the right table and matching rows from the left table.</p>
 
 <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">columns</span>
 <span class="k">FROM</span> <span class="n">table1</span>
 <span class="k">RIGHT</span> <span class="k">JOIN</span> <span class="n">table2</span> <span class="k">ON</span> <span class="n">table1</span><span class="p">.</span><span class="k">column_name</span> <span class="o">=</span> <span class="n">table2</span><span class="p">.</span><span class="k">column_name</span><span class="p">;</span>
 </code></pre></div></div>
 
-<p>Full Outer Join retrieves all rows when there is a match in either table:</p>
+<p>Full Outer Join retrieves all rows when there is a match in either table.</p>
 
 <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">columns</span>
 <span class="k">FROM</span> <span class="n">table1</span>
@@ -77,14 +77,14 @@
 </code></pre></div></div>
 
 <h3 id="inserting-data-into-a-table">Inserting Data into a Table</h3>
-<p>Add new rows of data into a table using INSERT INTO:</p>
+<p>Add new rows of data into a table using INSERT INTO.</p>
 
 <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">INSERT</span> <span class="k">INTO</span> <span class="k">table_name</span> <span class="p">(</span><span class="n">column1</span><span class="p">,</span> <span class="n">column2</span><span class="p">,</span> <span class="p">...)</span>
 <span class="k">VALUES</span> <span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="n">value2</span><span class="p">,</span> <span class="p">...);</span>
 </code></pre></div></div>
 
 <h3 id="creating-a-view">Creating a View</h3>
-<p>Views are virtual tables derived from one or more base tables. Use CREATE VIEW AS to define a view:</p>
+<p>Views are virtual tables derived from one or more base tables. Use CREATE VIEW AS to define a view.</p>
 
 <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="k">VIEW</span> <span class="n">view_name</span> <span class="k">AS</span>
 <span class="k">SELECT</span> <span class="n">columns</span>
@@ -93,15 +93,15 @@
 </code></pre></div></div>
 
 <h3 id="altering-table-structure">Altering Table Structure</h3>
-<p>Modify the structure of a table using ALTER TABLE:</p>
+<p>Modify the structure of a table using ALTER TABLE.</p>
 
-<p>Adding Columns:</p>
+<p>Adding Columns.</p>
 
 <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="k">table_name</span>
 <span class="k">ADD</span> <span class="k">column_name</span> <span class="n">datatype</span><span class="p">;</span>
 </code></pre></div></div>
 <h3 id="ordering-results">Ordering Results</h3>
-<p>Sort query results in ascending or descending order using ORDER BY:</p>
+<p>Sort query results in ascending or descending order using ORDER BY.</p>
 
 <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">columns</span>
 <span class="k">FROM</span> <span class="k">table_name</span>
@@ -109,14 +109,14 @@
 </code></pre></div></div>
 
 <h3 id="calculating-rankings">Calculating Rankings</h3>
-<p>To rank rows based on certain criteria, such as scores or sales:</p>
+<p>To rank rows based on certain criteria, such as scores or sales.</p>
 
 <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">column1</span><span class="p">,</span> <span class="n">column2</span><span class="p">,</span> <span class="p">...,</span> <span class="n">RANK</span><span class="p">()</span> <span class="n">OVER</span> <span class="p">(</span><span class="k">ORDER</span> <span class="k">BY</span> <span class="n">score</span> <span class="k">DESC</span><span class="p">)</span> <span class="k">AS</span> <span class="n">rank</span>
 <span class="k">FROM</span> <span class="k">table_name</span><span class="p">;</span>
 </code></pre></div></div>
 
 <p>This query ranks rows based on the score column in descending order.
-This format should be more suitable for your blog post, providing both SQL code examples and their explanations.</p>]]></content><author><name>Max</name><email>maxkim7723@gmail.com</email></author><category term="CS" /><category term="CS" /><category term="Knowledge" /><category term="Quiz" /><category term="SQL" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">[CS] Understanding Packet Switching: Virtual Circuit and Datagram Methods with Quiz</title><link href="http://localhost:4000/cs/CSQuiz1/" rel="alternate" type="text/html" title="[CS] Understanding Packet Switching: Virtual Circuit and Datagram Methods with Quiz" /><published>2024-07-11T00:00:00+09:00</published><updated>2024-07-11T00:00:00+09:00</updated><id>http://localhost:4000/cs/CSQuiz1</id><content type="html" xml:base="http://localhost:4000/cs/CSQuiz1/"><![CDATA[<p><img src="/assets/images/2024-07-11-CSQuiz1/quiz.png" alt="CSQuiz" /></p>
+This format should be more suitable for your blog post, providing both SQL code examples and their explanations.</p>]]></content><author><name>Max</name><email>maxkim7723@gmail.com</email></author></entry><entry><title type="html">[CS] Understanding Packet Switching: Virtual Circuit and Datagram Methods with Quiz</title><link href="http://localhost:4000/cs/CSQuiz1/" rel="alternate" type="text/html" title="[CS] Understanding Packet Switching: Virtual Circuit and Datagram Methods with Quiz" /><published>2024-07-11T00:00:00+09:00</published><updated>2024-07-11T00:00:00+09:00</updated><id>http://localhost:4000/cs/CSQuiz1</id><content type="html" xml:base="http://localhost:4000/cs/CSQuiz1/"><![CDATA[<p><img src="/assets/images/2024-07-11-CSQuiz1/quiz.png" alt="CSQuiz" /></p>
 
 <ol>
   <li>What term describes the number of unique values in a specific dataset?
