@@ -1,215 +1,31 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-07-16T17:20:49+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Max Note</title><subtitle>An amazing website.</subtitle><author><name>Max</name><email>maxkim7723@gmail.com</email></author><entry><title type="html"></title><link href="http://localhost:4000/2024-07-16-SQL/" rel="alternate" type="text/html" title="" /><published>2024-07-16T17:20:49+09:00</published><updated>2024-07-16T17:20:49+09:00</updated><id>http://localhost:4000/2024-07-16-SQL</id><content type="html" xml:base="http://localhost:4000/2024-07-16-SQL/"><![CDATA[<p><img src="/assets/images/2024-07-11-CSQuiz1/quiz.png" alt="CSQuiz" /></p>
+---
+layout: 
+---
 
-<p>Q. What SQL statement is used to retrieve data from a database?</p>
-
-<p>A. The <code class="language-plaintext highlighter-rouge">SELECT</code> statement is used to fetch data from one or more tables in a database.</p>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="k">table_name</span><span class="p">;</span>
-</code></pre></div></div>
-
-<p>Q. How do you insert new data into a table named customers with columns name and email?</p>
-
-<p>A. Use the INSERT INTO statement to add new records to a table.</p>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">customers</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">email</span><span class="p">)</span>
-<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'John Doe'</span><span class="p">,</span> <span class="s1">'john@example.com'</span><span class="p">);</span>
-</code></pre></div></div>
-
-<p>Q. What SQL keyword is used to modify existing data in a table?</p>
-
-<p>A. The UPDATE statement is used to modify existing records in a table based on specified conditions.</p>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">UPDATE</span> <span class="k">table_name</span>
-<span class="k">SET</span> <span class="n">column1</span> <span class="o">=</span> <span class="n">value1</span><span class="p">,</span> <span class="n">column2</span> <span class="o">=</span> <span class="n">value2</span><span class="p">,</span> <span class="p">...</span>
-<span class="k">WHERE</span> <span class="n">condition</span><span class="p">;</span>
-</code></pre></div></div>
-
-<h2 id="essential-sql-syntax-patterns-for-everyday-use">Essential SQL Syntax Patterns for Everyday Use</h2>
-
-<p>SQL (Structured Query Language) is essential for managing and manipulating data in relational databases. Mastering fundamental SQL syntax patterns empowers developers and analysts to efficiently retrieve, manipulate, and organize data.</p>
-
-<h3 id="creating-an-index">Creating an Index</h3>
-
-<p>Indexes enhance query performance by providing quick access to rows in a table. Use the following syntax to create an index.</p>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="k">INDEX</span> <span class="n">index_name</span>
-<span class="k">ON</span> <span class="k">table_name</span> <span class="p">(</span><span class="k">column_name</span><span class="p">);</span>
-</code></pre></div></div>
-
-<h3 id="updating-data-with-conditions">Updating Data with Conditions</h3>
-
-<p>Update specific rows in a table based on certain conditions using UPDATE with SET and WHERE clauses.</p>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">UPDATE</span> <span class="k">table_name</span>
-<span class="k">SET</span> <span class="n">column1</span> <span class="o">=</span> <span class="n">value1</span><span class="p">,</span> <span class="n">column2</span> <span class="o">=</span> <span class="n">value2</span><span class="p">,</span> <span class="p">...</span>
-<span class="k">WHERE</span> <span class="n">condition</span><span class="p">;</span>
-</code></pre></div></div>
-
-<h3 id="joining-data-from-multiple-tables">Joining Data from Multiple Tables</h3>
-<p>Combine data from different tables using various join types.</p>
-
-<p>Inner Join retrieves rows with matching values in both tables.</p>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">columns</span>
-<span class="k">FROM</span> <span class="n">table1</span>
-<span class="k">INNER</span> <span class="k">JOIN</span> <span class="n">table2</span> <span class="k">ON</span> <span class="n">table1</span><span class="p">.</span><span class="k">column_name</span> <span class="o">=</span> <span class="n">table2</span><span class="p">.</span><span class="k">column_name</span><span class="p">;</span>
-</code></pre></div></div>
-
-<p>Left Join retrieves all rows from the left table and matching rows from the right table</p>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">columns</span>
-<span class="k">FROM</span> <span class="n">table1</span>
-<span class="k">LEFT</span> <span class="k">JOIN</span> <span class="n">table2</span> <span class="k">ON</span> <span class="n">table1</span><span class="p">.</span><span class="k">column_name</span> <span class="o">=</span> <span class="n">table2</span><span class="p">.</span><span class="k">column_name</span><span class="p">;</span>
-</code></pre></div></div>
-
-<p>Right Join retrieves all rows from the right table and matching rows from the left table.</p>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">columns</span>
-<span class="k">FROM</span> <span class="n">table1</span>
-<span class="k">RIGHT</span> <span class="k">JOIN</span> <span class="n">table2</span> <span class="k">ON</span> <span class="n">table1</span><span class="p">.</span><span class="k">column_name</span> <span class="o">=</span> <span class="n">table2</span><span class="p">.</span><span class="k">column_name</span><span class="p">;</span>
-</code></pre></div></div>
-
-<p>Full Outer Join retrieves all rows when there is a match in either table.</p>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">columns</span>
-<span class="k">FROM</span> <span class="n">table1</span>
-<span class="k">FULL</span> <span class="k">OUTER</span> <span class="k">JOIN</span> <span class="n">table2</span> <span class="k">ON</span> <span class="n">table1</span><span class="p">.</span><span class="k">column_name</span> <span class="o">=</span> <span class="n">table2</span><span class="p">.</span><span class="k">column_name</span><span class="p">;</span>
-</code></pre></div></div>
-
-<h3 id="inserting-data-into-a-table">Inserting Data into a Table</h3>
-<p>Add new rows of data into a table using INSERT INTO.</p>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">INSERT</span> <span class="k">INTO</span> <span class="k">table_name</span> <span class="p">(</span><span class="n">column1</span><span class="p">,</span> <span class="n">column2</span><span class="p">,</span> <span class="p">...)</span>
-<span class="k">VALUES</span> <span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="n">value2</span><span class="p">,</span> <span class="p">...);</span>
-</code></pre></div></div>
-
-<h3 id="creating-a-view">Creating a View</h3>
-<p>Views are virtual tables derived from one or more base tables. Use CREATE VIEW AS to define a view.</p>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="k">VIEW</span> <span class="n">view_name</span> <span class="k">AS</span>
-<span class="k">SELECT</span> <span class="n">columns</span>
-<span class="k">FROM</span> <span class="k">table_name</span>
-<span class="k">WHERE</span> <span class="n">condition</span><span class="p">;</span>
-</code></pre></div></div>
-
-<h3 id="altering-table-structure">Altering Table Structure</h3>
-<p>Modify the structure of a table using ALTER TABLE.</p>
-
-<p>Adding Columns.</p>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="k">table_name</span>
-<span class="k">ADD</span> <span class="k">column_name</span> <span class="n">datatype</span><span class="p">;</span>
-</code></pre></div></div>
-<h3 id="ordering-results">Ordering Results</h3>
-<p>Sort query results in ascending or descending order using ORDER BY.</p>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">columns</span>
-<span class="k">FROM</span> <span class="k">table_name</span>
-<span class="k">ORDER</span> <span class="k">BY</span> <span class="k">column_name</span> <span class="k">ASC</span><span class="o">|</span><span class="k">DESC</span><span class="p">;</span>
-</code></pre></div></div>
-
-<h3 id="calculating-rankings">Calculating Rankings</h3>
-<p>To rank rows based on certain criteria, such as scores or sales.</p>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">column1</span><span class="p">,</span> <span class="n">column2</span><span class="p">,</span> <span class="p">...,</span> <span class="n">RANK</span><span class="p">()</span> <span class="n">OVER</span> <span class="p">(</span><span class="k">ORDER</span> <span class="k">BY</span> <span class="n">score</span> <span class="k">DESC</span><span class="p">)</span> <span class="k">AS</span> <span class="n">rank</span>
-<span class="k">FROM</span> <span class="k">table_name</span><span class="p">;</span>
-</code></pre></div></div>
-
-<p>This query ranks rows based on the score column in descending order.
-This format should be more suitable for your blog post, providing both SQL code examples and their explanations.</p>]]></content><author><name>Max</name><email>maxkim7723@gmail.com</email></author></entry><entry><title type="html">[CS] Understanding Packet Switching: Virtual Circuit and Datagram Methods with Quiz</title><link href="http://localhost:4000/cs/CSQuiz1/" rel="alternate" type="text/html" title="[CS] Understanding Packet Switching: Virtual Circuit and Datagram Methods with Quiz" /><published>2024-07-11T00:00:00+09:00</published><updated>2024-07-11T00:00:00+09:00</updated><id>http://localhost:4000/cs/CSQuiz1</id><content type="html" xml:base="http://localhost:4000/cs/CSQuiz1/"><![CDATA[<p><img src="/assets/images/2024-07-11-CSQuiz1/quiz.png" alt="CSQuiz" /></p>
-
-<ol>
-  <li>What term describes the number of unique values in a specific dataset?
-    <ul>
-      <li>Explanation: Cardinality refers to the distinct count of values within a dataset, indicating how many unique values exist.</li>
-    </ul>
-  </li>
-  <li>What term is used to describe the actual set of data stored in a database table?
-    <ul>
-      <li>Explanation: A relation instance is the concrete collection of data stored within a database table, also known as the relation or extension.</li>
-    </ul>
-  </li>
-  <li>In the context of databases, what does a tuple represent?
-    <ul>
-      <li>Explanation: A tuple refers to a single row or record within a database table, containing data fields corresponding to the table’s attributes.</li>
-    </ul>
-  </li>
-  <li>Which protocol is used to send error messages and operational information in IP networks?
-    <ul>
-      <li>Explanation: ICMP is essential for network troubleshooting by reporting errors and providing feedback on IP packet transmission.</li>
-    </ul>
-  </li>
-  <li>What term describes a program that self-replicates and spreads to other computers through network connections?
-    <ul>
-      <li>Explanation: A virus is a type of malware that replicates itself and spreads to other computers by attaching to host files or through network transmissions.</li>
-    </ul>
-  </li>
-  <li>Which protocol provides secure remote access to a computer or server, offering stronger security than Telnet?
-    <ul>
-      <li>Explanation: SSH encrypts communication sessions between computers, providing secure remote access and file transfer capabilities.</li>
-    </ul>
-  </li>
-  <li>What term describes a unit of data transmitted independently over a network without establishing a connection?
-    <ul>
-      <li>Explanation: A datagram is a self-contained packet of data sent across a network without a prior setup of connection paths, commonly used in packet-switched networks.</li>
-    </ul>
-  </li>
-  <li>In networking, what is a pre-defined logical communication path between sender and receiver stations called?
-    <ul>
-      <li>Explanation: A virtual circuit is a predetermined logical route in packet-switched networks, ensuring ordered and reliable data transmission between endpoints.</li>
-    </ul>
-  </li>
-  <li>What web development technique enables asynchronous loading of web page content, allowing users to interact with web pages more dynamically?
-    <ul>
-      <li>Explanation: AJAX facilitates updating specific parts of a web page without refreshing the entire page, enhancing user interaction and responsiveness in web applications.</li>
-    </ul>
-  </li>
-  <li>What term describes a program that appears benign but performs malicious actions when executed?
-    <ul>
-      <li>Explanation: A Trojan horse disguises itself as legitimate software to deceive users into executing harmful actions.</li>
-    </ul>
-  </li>
-  <li>Which protocol is used to send error messages and operational information in IP networks?
-    <ul>
-      <li>Explanation: ICMP is essential for network troubleshooting by reporting errors and providing feedback on IP packet transmission.</li>
-    </ul>
-  </li>
-</ol>
-
-<h2 id="understanding-packet-switching-virtual-circuit-and-datagram-methods">Understanding Packet Switching: Virtual Circuit and Datagram Methods</h2>
-
-<p>Packet switching is a method of transmitting messages by dividing them into packets of a certain length. This method is fundamental to modern networking and can be categorized into two types: virtual circuit switching and datagram switching.</p>
-
-<h3 id="virtual-circuit-switching">Virtual Circuit Switching</h3>
-
-<p>Virtual circuit switching establishes a logical virtual communication circuit between terminals before transmission. Here’s how it works:</p>
-
-<ul>
-  <li><strong>Pre-established Route</strong>: A logical communication circuit is set up between the sender and receiver in advance, confirming the connection before transmission.</li>
-  <li><strong>Control Packets</strong>: The route is set by a control packet before any information is sent.</li>
-  <li><strong>Order Preservation</strong>: All packets are transmitted sequentially along the same route, ensuring that the order of transmission and reception is maintained.</li>
-</ul>
-
-<h3 id="datagram-switching">Datagram Switching</h3>
-
-<p>Datagram switching, on the other hand, does not set a connection route. Instead, it relies on the current traffic conditions and independently handles each packet. Here are its key characteristics:</p>
-
-<ul>
-  <li><strong>No Pre-set Route</strong>: It does not establish a fixed connection route. Instead, it monitors the traffic status of accessible nodes and distributes packets accordingly.</li>
-  <li><strong>Independent Packets</strong>: Each packet may have a different transmission route and carries the complete address of the destination.</li>
-  <li><strong>Reordering at Destination</strong>: Packets might arrive at the destination through various routes and in different orders, requiring reordering at the receiving end.</li>
-</ul>
-
-<p>Understanding the differences between virtual circuit switching and datagram switching is crucial for grasping how data is transmitted over networks. Each method has its unique advantages and is suitable for different types of network communication.</p>]]></content><author><name>Max</name><email>maxkim7723@gmail.com</email></author><category term="CS" /><category term="CS" /><category term="Knowledge" /><category term="Quiz" /><category term="Network" /><category term="Packet Switching" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">첫 제목</title><link href="http://localhost:4000/coding/first/" rel="alternate" type="text/html" title="첫 제목" /><published>2024-07-09T00:00:00+09:00</published><updated>2024-07-09T00:00:00+09:00</updated><id>http://localhost:4000/coding/first</id><content type="html" xml:base="http://localhost:4000/coding/first/"><![CDATA[<h1 id="오늘-처음-블로그">오늘 처음 블로그</h1>
-
-<p><img src="C:\Users\User\Downloads\초록색%20심플한%20블로그%20챌린지%20인스타그램%20포스트.png" alt="열" />심</p>
-
-<p>@</p>
-
-<p><img src="/images/2024-07-09-first/HTMLCSSJS.png" alt=" vv " /></p>
-
-<p><img src="" alt=" ff" /></p>
-
-<p><img src="C:\Users\User\Downloads\HTMLCSSJS.png" alt="" /></p>
-
-<p>@</p>]]></content><author><name>Max</name><email>maxkim7723@gmail.com</email></author><category term="coding" /><category term="python" /><category term="blog" /><category term="jekyll" /><summary type="html"><![CDATA[오늘 처음 블로그]]></summary></entry></feed>
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.title | xml_escape }}</title>
+    <description>{{ site.description | xml_escape }}</description>
+    <link>{{ site.url }}{{ site.baseurl }}/</link>
+    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
+    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    <generator>Jekyll v{{ jekyll.version }}</generator>
+    {% for post in site.posts limit:10 %}
+      <item>
+        <title>{{ post.title | xml_escape }}</title>
+        <description>{{ post.content | xml_escape }}</description>
+        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
+        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
+        {% for tag in post.tags %}
+        <category>{{ tag | xml_escape }}</category>
+        {% endfor %}
+        {% for cat in post.categories %}
+        <category>{{ cat | xml_escape }}</category>
+        {% endfor %}
+      </item>
+    {% endfor %}
+  </channel>
+</rss>
