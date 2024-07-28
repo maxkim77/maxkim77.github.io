@@ -7,9 +7,11 @@ toc: true
 ---
 
 
+![CSQuiz]({{site.urls}}/assets/images/2024-07-11-CSQuiz1/quiz.png)
+
+
 # Understanding the Role of the Network Layer and Virtual Circuits & Datagram
 
-![CSQuiz]({{site.urls}}/assets/images/2024-07-11-CSQuiz1/quiz.png)
 
 ### Quiz Question
 
