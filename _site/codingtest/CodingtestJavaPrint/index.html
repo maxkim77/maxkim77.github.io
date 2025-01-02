@@ -1,0 +1,1040 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en-US" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[CodingTest] Printing a String in Java - Max Note</title>
+<meta name="description" content="">
+
+
+  <meta name="author" content="Max">
+  
+  <meta property="article:author" content="Max">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Max Note">
+<meta property="og:title" content="[CodingTest] Printing a String in Java">
+<meta property="og:url" content="http://localhost:4000/codingtest/CodingtestJavaPrint/">
+
+
+  <meta property="og:description" content="">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2024-08-28T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/codingtest/CodingtestJavaPrint/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Max Note Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script type="text/javascript">
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/max.png" alt="Max Note"></a>
+        
+        <a class="site-title" href="/">
+          Max Note
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/categories/"
+                
+                
+              >Category</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/tags/"
+                
+                
+              >Tag</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/search/"
+                
+                
+              >Search</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/categories/#codingtest" itemprop="item"><span itemprop="name">Codingtest</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">[CodingTest] Printing a String in Java</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">Max</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>I am max, and learning web application</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">South, Korea</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/maxkim77" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:maxkim7723@gmail.com" rel="me" class="u-email">
+            <meta itemprop="email" content="maxkim7723@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[CodingTest] Printing a String in Java">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="2024-08-28T00:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="http://localhost:4000/codingtest/CodingtestJavaPrint/" itemprop="url">[CodingTest] Printing a String in Java
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          7 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#printing-a-string-in-java">Printing a String in Java</a><ul><li><a href="#problem-description">Problem Description</a></li><li><a href="#example-input-and-output">Example Input and Output</a></li><li><a href="#java-code-implementation">Java Code Implementation</a></li><li><a href="#code-explanation">Code Explanation</a></li><li><a href="#concept-summary">Concept Summary</a></li></ul></li></ul></li><li><a href="#print-a-and-b">Print a and b</a><ul><li><a href="#problem-description-1">Problem Description</a></li><li><a href="#constraints">Constraints</a></li><li><a href="#inputoutput-example">Input/Output Example</a></li><li><a href="#solutionjava">Solution.java</a></li><li><a href="#explanation-and-concept-overview">Explanation and Concept Overview</a></li><li><a href="#concept-overview">Concept Overview</a></li></ul></li></ul></li><li><a href="#toggle-case-and-print">Toggle Case and Print</a><ul><li><a href="#problem-description-2">Problem Description</a></li><li><a href="#constraints-1">Constraints</a></li><li><a href="#inputoutput-example-1">Input/Output Example</a></li><li><a href="#solution">Solution</a></li><li><a href="#conceptual-explanation">Conceptual Explanation</a></li><li><a href="#summary">Summary</a></li></ul></li></ul></li></ul>
+            </nav>
+          </aside>
+        
+        <p><img src="/assets/images/2024-08-28-PrintingaStringinJava/2.png" alt="Codingtest" /></p>
+
+<h1 id="printing-a-string-in-java">Printing a String in Java</h1>
+
+<h3 id="problem-description">Problem Description</h3>
+
+<p>In this post, we’ll explore how to take a string as input and print it in Java. This is a fundamental exercise in understanding basic input/output operations in Java programming.</p>
+
+<p><strong>Problem Statement</strong></p>
+
+<p>Given a string <code class="language-plaintext highlighter-rouge">str</code>, write a program that reads the string and prints it.</p>
+
+<p><strong>Constraints</strong></p>
+
+<ul>
+  <li>The length of <code class="language-plaintext highlighter-rouge">str</code> is between 1 and 1,000,000 characters.</li>
+  <li>The string <code class="language-plaintext highlighter-rouge">str</code> contains no spaces and is provided in a single line.</li>
+</ul>
+
+<h3 id="example-input-and-output">Example Input and Output</h3>
+
+<p><strong>Example Input</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input #1:
+
+HelloWorld!
+</code></pre></div></div>
+
+<p><strong>Example Output</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Output #1:
+
+HelloWorld!
+</code></pre></div></div>
+
+<h3 id="java-code-implementation">Java Code Implementation</h3>
+
+<details>
+    <summary>Details</summary>
+
+<pre><code>
+
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in); // Step 1: Create a Scanner object to read input
+        String a = sc.next();               // Step 2: Read a single word (without spaces) from the input
+        System.out.println(a);              // Step 3: Print the input string
+    }
+}
+
+</code></pre>
+
+</details>
+
+<h3 id="code-explanation">Code Explanation</h3>
+
+<details>
+    <summary>Details</summary>
+1. Scanner sc = new Scanner(System.in);
+<br />
+Here, we create an instance of the Scanner class, named sc, which reads from the standard input (System.in). This allows us to take input from the user.
+<br />
+<br />
+2. String a = sc.next();
+<br />
+This line reads the next token of input as a string. The next() method of Scanner reads input until a space is encountered, making it ideal for reading a single word.
+<br />
+<br />
+3. System.out.println(a);
+<br />
+Finally, this line prints the string a to the console. The println method is used to print the output followed by a newline.
+<br />
+<br />
+</details>
+
+<h3 id="concept-summary">Concept Summary</h3>
+
+<ul>
+  <li>Scanner Class</li>
+</ul>
+
+<p>The Scanner class in Java is a utility that allows for simple input reading from different input streams, like the keyboard. It’s part of the java.util package, which must be imported to use the class.</p>
+
+<ul>
+  <li>Main Method</li>
+</ul>
+
+<p>The main method serves as the entry point for any Java program. When the program is run, execution begins here.</p>
+
+<ul>
+  <li>Reading Input</li>
+</ul>
+
+<p>The next() method of the Scanner object reads the next token from the input until it encounters a space. It’s used to read a single word or a string without spaces.</p>
+
+<ul>
+  <li>Printing Output</li>
+</ul>
+
+<p>The System.out.println() method is used to print the output to the console, followed by a newline.</p>
+
+<p>This program demonstrates a basic input/output operation in Java. It reads a single string from the user and prints it back, showcasing how to handle simple input and output in a Java program.</p>
+
+<p>This example is a foundational exercise in Java programming, highlighting how to work with basic input and output. Understanding these concepts is crucial as they form the basis for more complex operations and interactions in Java applications. This program can be run in any standard Java environment and is a great starting point for beginners.</p>
+
+<h1 id="print-a-and-b">Print <code class="language-plaintext highlighter-rouge">a</code> and <code class="language-plaintext highlighter-rouge">b</code></h1>
+
+<h3 id="problem-description-1">Problem Description</h3>
+
+<p>You are given two integers, <code class="language-plaintext highlighter-rouge">a</code> and <code class="language-plaintext highlighter-rouge">b</code>. Write a code to take these numbers as input and print them in the format shown in the example.</p>
+
+<h3 id="constraints">Constraints</h3>
+
+<ul>
+  <li>100,000 ≤ a, b ≤ 100,000</li>
+</ul>
+
+<h3 id="inputoutput-example">Input/Output Example</h3>
+
+<p><strong>Input #1</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>4 5
+</code></pre></div></div>
+
+<p><strong>Output #1</strong></p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">a</span> <span class="o">=</span> <span class="err">4</span>
+<span class="nt">b</span> <span class="o">=</span> <span class="err">5</span>
+
+</code></pre></div></div>
+
+<h3 id="solutionjava">Solution.java</h3>
+
+<details>
+    <summary>Details</summary>
+
+<pre><code>
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+    }
+}
+</code></pre>
+
+</details>
+
+<h3 id="explanation-and-concept-overview">Explanation and Concept Overview</h3>
+
+<details>
+    <summary>Details</summary>
+
+The task is to read two integers, `a` and `b`, from the user input and print them in a specified format. This is a straightforward problem that tests basic input/output operations in Java.
+
+1. Input
+<br />
+    - The program uses `Scanner` to read two integers from the user.
+<br />
+    - `sc.nextInt()` reads the next integer from the input.
+
+2. Output
+<br />
+    - The program then prints the values of `a` and `b` in the format "a = value" and "b = value".
+<br />
+    - This is done using `System.out.println()` where the string concatenation operator (`+`) is used to combine the text with the variable values.
+<br />
+</details>
+
+<h3 id="concept-overview">Concept Overview</h3>
+
+<ul>
+  <li>
+    <p><strong>Basic Input/Output</strong></p>
+
+    <p>This problem emphasizes understanding how to take input from the user and how to output the data in a specific format. It’s fundamental for beginners to grasp how input and output work in Java.</p>
+  </li>
+  <li>
+    <p><strong>String Concatenation</strong></p>
+
+    <p>The problem also involves string concatenation, where you combine strings and variables to create a desired output format.</p>
+  </li>
+  <li>
+    <p><strong>Using the <code class="language-plaintext highlighter-rouge">Scanner</code> Class:</strong></p>
+
+    <p>The <code class="language-plaintext highlighter-rouge">Scanner</code> class is a part of the <code class="language-plaintext highlighter-rouge">java.util</code> package, and it is widely used for taking input in Java. This problem introduces or reinforces the use of <code class="language-plaintext highlighter-rouge">Scanner</code> to read integers from standard input.</p>
+  </li>
+</ul>
+
+<p>This problem is a basic exercise in handling input and output in Java, useful for beginners to get accustomed to reading input and printing formatted output.</p>
+
+<h1 id="toggle-case-and-print">Toggle Case and Print</h1>
+
+<h3 id="problem-description-2">Problem Description</h3>
+
+<p>You are given a string <code class="language-plaintext highlighter-rouge">str</code> composed of English alphabets. Write a code to convert each alphabet in the string to its opposite case (uppercase to lowercase, and lowercase to uppercase) and then print the result.</p>
+
+<h3 id="constraints-1">Constraints</h3>
+
+<ul>
+  <li>The length of <code class="language-plaintext highlighter-rouge">str</code> is between 1 and 20 inclusive.</li>
+  <li><code class="language-plaintext highlighter-rouge">str</code> consists of alphabetic characters only.</li>
+</ul>
+
+<h3 id="inputoutput-example-1">Input/Output Example</h3>
+
+<p><strong>Input #1</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aBcDeFg
+
+</code></pre></div></div>
+
+<p><strong>Output #1</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>AbCdEfG
+</code></pre></div></div>
+
+<p>※ The constraints were updated on May 3, 2023.</p>
+<h3 id="solution">Solution</h3>
+
+<details>
+    <summary>Details</summary>
+    <pre><code>
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        // Create a Scanner object to read input
+        Scanner sc = new Scanner(System.in);
+        
+        // Read the input string
+        String a = sc.next();
+        
+        // Create a variable to store the result
+        String answer = "";
+        
+        // Variable to store each character
+        char c;
+        
+        // Loop through each character in the input string
+        for(int i = 0; i &lt; a.length(); i++) {
+            // Get the character at the current position in the string
+            c = a.charAt(i);
+            
+            // Check if the character is uppercase
+            if(Character.isUpperCase(c)) {
+                // Convert to lowercase and append to the result
+                answer += Character.toLowerCase(c); 
+            } else {
+                // Convert to uppercase and append to the result
+                answer += Character.toUpperCase(c);
+            }
+        }
+        
+        // Print the final result
+        System.out.println(answer);        
+    }
+}
+
+</code></pre>
+
+</details>
+
+<h3 id="conceptual-explanation">Conceptual Explanation</h3>
+<ol>
+  <li><strong>Input Handling</strong>
+    <ul>
+      <li>The code begins by creating a <code class="language-plaintext highlighter-rouge">Scanner</code> object to read the input string from the user. The <code class="language-plaintext highlighter-rouge">sc.next()</code> function reads the next token of input (in this case, a string) and stores it in the variable <code class="language-plaintext highlighter-rouge">a</code>.</li>
+    </ul>
+  </li>
+  <li><strong>Variable Initialization</strong>
+    <ul>
+      <li>The variable <code class="language-plaintext highlighter-rouge">answer</code> is initialized as an empty string. This variable will be used to store the final output after converting each character to its opposite case.</li>
+      <li>The variable <code class="language-plaintext highlighter-rouge">c</code> is declared to temporarily store each character from the string during the loop.</li>
+    </ul>
+  </li>
+  <li><strong>Looping through the String</strong>
+    <ul>
+      <li>A <code class="language-plaintext highlighter-rouge">for</code> loop iterates over each character in the string <code class="language-plaintext highlighter-rouge">a</code>. The loop runs from index <code class="language-plaintext highlighter-rouge">0</code> to the length of the string minus one.</li>
+    </ul>
+  </li>
+  <li><strong>Character Case Conversion</strong>
+    <ul>
+      <li>Inside the loop, the <code class="language-plaintext highlighter-rouge">charAt(i)</code> method is used to get the character at the current index <code class="language-plaintext highlighter-rouge">i</code> of the string.</li>
+      <li>The <code class="language-plaintext highlighter-rouge">Character.isUpperCase(c)</code> method checks if the character <code class="language-plaintext highlighter-rouge">c</code> is uppercase.
+        <ul>
+          <li>If <code class="language-plaintext highlighter-rouge">c</code> is uppercase, it is converted to lowercase using <code class="language-plaintext highlighter-rouge">Character.toLowerCase(c)</code>, and the result is appended to the <code class="language-plaintext highlighter-rouge">answer</code> string.</li>
+          <li>If <code class="language-plaintext highlighter-rouge">c</code> is lowercase, it is converted to uppercase using <code class="language-plaintext highlighter-rouge">Character.toUpperCase(c)</code>, and the result is appended to the <code class="language-plaintext highlighter-rouge">answer</code> string.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<blockquote>
+  <p>https://docs.oracle.com/javase/8/docs/api/</p>
+
+  <ul>
+    <li>
+      <p>toLowerCaseConverts the character (Unicode code point) argument to lowercase using case mapping information from the UnicodeData file.</p>
+
+      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  public static int toLowerCase(int codePoint)
+</code></pre></div>      </div>
+
+      <p>Note that <code class="language-plaintext highlighter-rouge">Character.isLowerCase(Character.toLowerCase(codePoint))</code> does not always return <code class="language-plaintext highlighter-rouge">true</code> for some ranges of characters, particularly those that are symbols or ideographs.</p>
+
+      <p>In general, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#toLowerCase--"><code class="language-plaintext highlighter-rouge">String.toLowerCase()</code></a> should be used to map characters to lowercase. <code class="language-plaintext highlighter-rouge">String</code> case mapping methods have several benefits over <code class="language-plaintext highlighter-rouge">Character</code> case mapping methods. <code class="language-plaintext highlighter-rouge">String</code> case mapping methods can perform locale-sensitive mappings, context-sensitive mappings, and 1:M character mappings, whereas the <code class="language-plaintext highlighter-rouge">Character</code> case mapping methods cannot.</p>
+
+      <p><strong>Parameters:</strong><code class="language-plaintext highlighter-rouge">codePoint</code> - the character (Unicode code point) to be converted.<strong>Returns:</strong>the lowercase equivalent of the character (Unicode code point), if any; otherwise, the character itself.<strong>Since:</strong>1.5<strong>See Also:</strong><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Character.html#isLowerCase-int-"><code class="language-plaintext highlighter-rouge">isLowerCase(int)</code></a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#toLowerCase--"><code class="language-plaintext highlighter-rouge">String.toLowerCase()</code></a></p>
+    </li>
+  </ul>
+
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public static char toUpperCase(char ch)
+</code></pre></div>  </div>
+
+  <p>Converts the character argument to uppercase using case mapping information from the UnicodeData file.</p>
+
+  <p>Note that <code class="language-plaintext highlighter-rouge">Character.isUpperCase(Character.toUpperCase(ch))</code> does not always return <code class="language-plaintext highlighter-rouge">true</code> for some ranges of characters, particularly those that are symbols or ideographs.</p>
+
+  <p>In general, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#toUpperCase--"><code class="language-plaintext highlighter-rouge">String.toUpperCase()</code></a> should be used to map characters to uppercase. <code class="language-plaintext highlighter-rouge">String</code> case mapping methods have several benefits over <code class="language-plaintext highlighter-rouge">Character</code> case mapping methods. <code class="language-plaintext highlighter-rouge">String</code> case mapping methods can perform locale-sensitive mappings, context-sensitive mappings, and 1:M character mappings, whereas the <code class="language-plaintext highlighter-rouge">Character</code> case mapping methods cannot.</p>
+
+  <p><strong>Note:</strong> This method cannot handle <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Character.html#supplementary">supplementary characters</a>. To support all Unicode characters, including supplementary characters, use the <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Character.html#toUpperCase-int-"><code class="language-plaintext highlighter-rouge">toUpperCase(int)</code></a> method.</p>
+
+  <p><strong>Parameters:</strong><code class="language-plaintext highlighter-rouge">ch</code> - the character to be converted.<strong>Returns:</strong>the uppercase equivalent of the character, if any; otherwise, the character itself.<strong>See Also:</strong><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Character.html#isUpperCase-char-"><code class="language-plaintext highlighter-rouge">isUpperCase(char)</code></a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#toUpperCase--"><code class="language-plaintext highlighter-rouge">String.toUpperCase()</code></a></p>
+
+</blockquote>
+
+<p><strong>Breif</strong></p>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">print</code></strong></li>
+</ul>
+
+<p>Outputs data as-is, stays on the same line.</p>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">println</code></strong></li>
+</ul>
+
+<p>Outputs data as-is, then moves to a new line.</p>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">printf</code></strong></li>
+</ul>
+
+<p>Formats and outputs data according to a specified format, stays on the same line unless explicitly told to move to the next line.</p>
+
+<h3 id="summary">Summary</h3>
+
+<p>This code efficiently toggles the case of each character in a string provided by the user. It demonstrates the use of loops, conditionals, and basic string operations in Java. The approach ensures that every character is checked and converted appropriately, resulting in the desired output.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#cs" class="page__taxonomy-item p-category" rel="tag">CS</a><span class="sep">, </span>
+    
+      <a href="/tags/#input-output" class="page__taxonomy-item p-category" rel="tag">Input/Output</a><span class="sep">, </span>
+    
+      <a href="/tags/#java" class="page__taxonomy-item p-category" rel="tag">Java</a><span class="sep">, </span>
+    
+      <a href="/tags/#programming" class="page__taxonomy-item p-category" rel="tag">Programming</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#codingtest" class="page__taxonomy-item p-category" rel="tag">CodingTest</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-08-28T00:00:00+09:00">2024-08-28</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=%5BCodingTest%5D+Printing+a+String+in+Java%20http%3A%2F%2Flocalhost%3A4000%2Fcodingtest%2FCodingtestJavaPrint%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fcodingtest%2FCodingtestJavaPrint%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/codingtest/CodingtestJavaPrint/" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/cs/ATM/" class="pagination--pager" title="[CS] Understanding Asynchronous Transfer Mode (ATM) and Asynchronous Time-Division Multiplexing (ATDM)
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    
+<div class="page__related">
+  
+  <h2 class="page__related-title">You may also enjoy</h2>
+  <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/cs/ATM/" rel="permalink">[CS] Understanding Asynchronous Transfer Mode (ATM) and Asynchronous Time-Division Multiplexing (ATDM)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/cs/vcdatagram/" rel="permalink">[CS] Understanding the Role of the Network Layer and Virtual Circuits&amp;Datagram
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/cs/SQL/" rel="permalink">[CS] Frequently Used SQL syntax
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/cs/CSQuiz1/" rel="permalink">[CS] Understanding Packet Switching: Virtual Circuit and Datagram Methods with Quiz
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+    
+  </div>
+</div>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/maxkim77" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 <a href="http://localhost:4000">Max Note</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "http://localhost:4000/codingtest/CodingtestJavaPrint/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/codingtest/CodingtestJavaPrint"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://max-note.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+  </body>
+</html>
