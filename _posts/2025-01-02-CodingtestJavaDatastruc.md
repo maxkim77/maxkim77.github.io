@@ -15,7 +15,7 @@ toc: true
 You are given **N numbers** written consecutively without spaces. Write a program to calculate and print the sum of these numbers.
 
 ### Constraints
-- **1 \u2264 N \u2264 100**
+- **1 <= N <= 100**
 - The input numbers are provided without spaces.
 
 ### Input Format
@@ -73,7 +73,7 @@ You are given **N numbers** written consecutively without spaces. Write a progra
 ---
 
 ### Approach
-This problem is solved by iterating through each digit of the input string, converting it to an integer, and adding it to a running sum. The approach is straightforward and efficient given the constraint that \( N \leq 100 \).
+This problem is solved by iterating through each digit of the input string, converting it to an integer, and adding it to a running sum. The approach is straightforward and efficient given the constraint.
 
 #### Steps to Solve:
 1. Read the input values.
@@ -128,11 +128,6 @@ public class P11720 {
 
 4. **Output**:
    - Print the total sum.
-
----
-
-### Image Reference
-![Problem Breakdown](file-path/IMG_47B1A92411D1-1.jpeg)
 
 ---
 
