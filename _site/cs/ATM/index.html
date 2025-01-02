@@ -1,0 +1,799 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en-US" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[CS] Understanding Asynchronous Transfer Mode (ATM) and Asynchronous Time-Division Multiplexing (ATDM) - Max Note</title>
+<meta name="description" content="">
+
+
+  <meta name="author" content="Max">
+  
+  <meta property="article:author" content="Max">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Max Note">
+<meta property="og:title" content="[CS] Understanding Asynchronous Transfer Mode (ATM) and Asynchronous Time-Division Multiplexing (ATDM)">
+<meta property="og:url" content="http://localhost:4000/cs/ATM/">
+
+
+  <meta property="og:description" content="">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2024-07-25T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/cs/ATM/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Max Note Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script type="text/javascript">
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/max.png" alt="Max Note"></a>
+        
+        <a class="site-title" href="/">
+          Max Note
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/categories/"
+                
+                
+              >Category</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/tags/"
+                
+                
+              >Tag</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/search/"
+                
+                
+              >Search</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/categories/#cs" itemprop="item"><span itemprop="name">Cs</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">[CS] Understanding Asynchronous Transfer Mode (ATM) and Asynchronous Time-Division Multiplexing (ATDM)</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">Max</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>I am max, and learning web application</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">South, Korea</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/maxkim77" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:maxkim7723@gmail.com" rel="me" class="u-email">
+            <meta itemprop="email" content="maxkim7723@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[CS] Understanding Asynchronous Transfer Mode (ATM) and Asynchronous Time-Division Multiplexing (ATDM)">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="2024-07-25T00:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="http://localhost:4000/cs/ATM/" itemprop="url">[CS] Understanding Asynchronous Transfer Mode (ATM) and Asynchronous Time-Division Multiplexing (ATDM)
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#understanding-asynchronous-transfer-mode-atm-and-asynchronous-time-division-multiplexing-atdm">Understanding Asynchronous Transfer Mode (ATM) and Asynchronous Time-Division Multiplexing (ATDM)</a><ul><li><a href="#quiz-question">Quiz Question</a></li><li><a href="#explanation">Explanation</a></li></ul></li><li><a href="#what-is-asynchronous-transfer-mode-atm">What is Asynchronous Transfer Mode (ATM)?</a><ul><li><a href="#key-features-of-atm">Key Features of ATM</a></li></ul></li><li><a href="#what-is-asynchronous-time-division-multiplexing-atdm">What is Asynchronous Time-Division Multiplexing (ATDM)?</a><ul><li><a href="#key-features-of-atdm">Key Features of ATDM</a></li></ul></li><li><a href="#how-atm-and-atdm-work-together">How ATM and ATDM Work Together</a></li><li><a href="#diagram-explanation">Diagram Explanation</a><ul><li><a href="#diagram-breakdown">Diagram Breakdown</a></li></ul></li></ul></li></ul>
+            </nav>
+          </aside>
+        
+        <p><img src="/assets/images/2024-07-11-CSQuiz1/quiz.png" alt="CSQuiz" /></p>
+
+<h1 id="understanding-asynchronous-transfer-mode-atm-and-asynchronous-time-division-multiplexing-atdm">Understanding Asynchronous Transfer Mode (ATM) and Asynchronous Time-Division Multiplexing (ATDM)</h1>
+
+<h3 id="quiz-question">Quiz Question</h3>
+
+<p><strong>Question:</strong>
+Which of the following statements is true regarding Asynchronous Transfer Mode (ATM) and Asynchronous Time-Division Multiplexing (ATDM)?</p>
+
+<p>A. ATM uses variable-length packets for data transmission, while ATDM uses fixed-length cells.</p>
+
+<p>B. ATDM is a specific protocol, whereas ATM is a general multiplexing technique.</p>
+
+<p>C. ATM is connection-oriented and uses fixed-length 53-byte cells, while ATDM dynamically allocates time slots based on demand.</p>
+
+<p>D. In ATM, each type of data is assigned a specific time slot in a repeating cycle, similar to Time-Division Multiplexing (TDM).</p>
+
+<p><strong>Answer:</strong>
+C. ATM is connection-oriented and uses fixed-length 53-byte cells, while ATDM dynamically allocates time slots based on demand.</p>
+
+<h3 id="explanation">Explanation</h3>
+<ul>
+  <li><strong>Option A</strong> is incorrect because ATM uses fixed-length cells (53 bytes), not variable-length packets.</li>
+  <li><strong>Option B</strong> is incorrect because ATDM is a general multiplexing technique, while ATM is a specific protocol that uses ATDM principles.</li>
+  <li><strong>Option D</strong> is incorrect because ATM does not use fixed time slots in a repeating cycle; it dynamically allocates bandwidth as needed.</li>
+  <li><strong>Option C</strong> is correct as it accurately describes the characteristics of both ATM and ATDM.</li>
+</ul>
+
+<p>In the world of network technologies, two important concepts often come up: Asynchronous Transfer Mode (ATM) and Asynchronous Time-Division Multiplexing (ATDM). While these terms are closely related, they have distinct characteristics and applications. Let’s dive deeper into these technologies to understand their similarities, differences, and how they work together.</p>
+
+<h2 id="what-is-asynchronous-transfer-mode-atm">What is Asynchronous Transfer Mode (ATM)?</h2>
+
+<p>ATM is a high-speed networking standard designed for transmitting all types of data (such as voice, video, and data traffic) across a network. It is a packet-oriented transmission technology that uses fixed-size cells for data transfer. Each ATM cell is 53 bytes in length, consisting of a 5-byte header and a 48-byte payload.</p>
+
+<h3 id="key-features-of-atm">Key Features of ATM</h3>
+
+<ol>
+  <li>
+    <p><strong>Fixed-Length Cells</strong>: Unlike other networking protocols that use variable-length packets, ATM uses fixed-length cells of 53 bytes. This standardization simplifies hardware processing and helps maintain consistent transmission delays.</p>
+  </li>
+  <li>
+    <p><strong>Asynchronous Time-Division Multiplexing (ATDM)</strong>: ATM leverages the concept of ATDM, which means that data cells are transmitted asynchronously. Instead of using fixed time slots, each data stream dynamically receives time slots as needed, making efficient use of network resources.</p>
+  </li>
+  <li>
+    <p><strong>Connection-Oriented</strong>: ATM is a connection-oriented protocol. Before data transmission begins, a virtual circuit is established, specifying the path that data will follow through the network. This ensures reliable and consistent data delivery.</p>
+  </li>
+  <li>
+    <p><strong>Quality of Service (QoS)</strong>: ATM supports various levels of Quality of Service (QoS), making it suitable for applications with different performance requirements. It can handle diverse types of traffic, including real-time voice and video, as well as non-real-time data.</p>
+  </li>
+</ol>
+
+<h2 id="what-is-asynchronous-time-division-multiplexing-atdm">What is Asynchronous Time-Division Multiplexing (ATDM)?</h2>
+
+<p>ATDM is a general multiplexing technique where multiple data streams share the same communication channel by being assigned time slots based on demand. Unlike synchronous time-division multiplexing (TDM), where time slots are fixed, ATDM dynamically allocates time slots to data streams as needed.</p>
+
+<h3 id="key-features-of-atdm">Key Features of ATDM</h3>
+
+<ol>
+  <li>
+    <p><strong>Dynamic Time Slot Allocation</strong>: ATDM allocates time slots to data streams on an as-needed basis. This means that the channel’s time slots are not fixed and can be used more efficiently by only assigning them when there is data to be transmitted.</p>
+  </li>
+  <li>
+    <p><strong>Efficient Bandwidth Utilization</strong>: By dynamically allocating time slots, ATDM makes better use of the available bandwidth, minimizing idle periods and improving overall transmission efficiency.</p>
+  </li>
+  <li>
+    <p><strong>Flexibility</strong>: ATDM is not tied to a specific protocol and can be implemented in various systems and networks to accommodate different types of traffic and transmission requirements.</p>
+  </li>
+</ol>
+
+<h2 id="how-atm-and-atdm-work-together">How ATM and ATDM Work Together</h2>
+
+<p>ATM uses ATDM as its underlying multiplexing technique. Here’s how they integrate:</p>
+
+<ul>
+  <li><strong>Packet-Oriented Transmission</strong>: ATM’s use of fixed-length 53-byte cells ensures predictable performance and simplifies hardware design.</li>
+  <li><strong>Efficient Use of Network Resources</strong>: By employing ATDM, ATM can dynamically allocate time slots for transmitting cells, maximizing the efficiency of the network.</li>
+  <li><strong>Connection-Oriented Communication</strong>: ATM sets up a virtual circuit before data transmission, ensuring a reliable and continuous data stream. This connection-oriented nature, combined with ATDM’s efficient time slot allocation, makes ATM suitable for a wide range of applications with varying QoS requirements.</li>
+</ul>
+
+<h2 id="diagram-explanation">Diagram Explanation</h2>
+
+<p><img src="/assets/images/2024-07-25-ATM/1.png" alt="Asynchronous Transfer Mode (ATM)" /></p>
+
+<p>This diagram illustrates the concept of ATM and its comparison with TDM. Let’s break down the components and what they represent.</p>
+
+<h3 id="diagram-breakdown">Diagram Breakdown</h3>
+
+<ol>
+  <li><strong>Sources of Data</strong>
+    <ul>
+      <li><strong>Voice</strong>: Represented by gray blocks.</li>
+      <li><strong>Data Packets</strong>: Represented by black blocks.</li>
+      <li><strong>Images</strong>: Represented by light gray blocks.</li>
+    </ul>
+  </li>
+  <li><strong>Multiplexer (MUX)</strong>
+    <ul>
+      <li>The MUX is responsible for combining multiple streams of data (voice, data packets, and images) into a single stream for transmission. It acts as a central point where different types of data are synchronized and sent out over the network.</li>
+    </ul>
+  </li>
+  <li><strong>TDM (Time-Division Multiplexing)</strong>
+    <ul>
+      <li>In TDM, each type of data is assigned a specific time slot in a repeating cycle. For example, voice data might be sent in slot 1, data packets in slot 2, and images in slot 3, and so on.</li>
+      <li><strong>Wasted Bandwidth</strong>: TDM can lead to inefficiencies. If a particular time slot has no data to send (e.g., no voice data during a given cycle), that slot is left empty, resulting in wasted bandwidth.</li>
+    </ul>
+  </li>
+  <li><strong>ATM (Asynchronous Transfer Mode)</strong>
+    <ul>
+      <li>In ATM, data is sent in small, fixed-size cells (53 bytes). Each cell can carry different types of data depending on availability and demand.</li>
+      <li>Unlike TDM, ATM does not use fixed time slots. Instead, it dynamically allocates bandwidth as needed. This means there are no empty slots, and bandwidth is used more efficiently.</li>
+    </ul>
+  </li>
+</ol>
+
+<p>In summary, Asynchronous Transfer Mode (ATM) is a sophisticated network technology that combines the principles of Asynchronous Time-Division Multiplexing (ATDM) with fixed-length cells to achieve efficient, reliable, and high-speed data transmission. Understanding the interplay between ATM and ATDM helps in appreciating how modern networks manage diverse types of traffic, ensuring seamless communication and optimal resource utilization. Whether for voice, video, or data, ATM remains a powerful solution for meeting the demands of contemporary networking.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#atm" class="page__taxonomy-item p-category" rel="tag">ATM</a><span class="sep">, </span>
+    
+      <a href="/tags/#cs" class="page__taxonomy-item p-category" rel="tag">CS</a><span class="sep">, </span>
+    
+      <a href="/tags/#knowledge" class="page__taxonomy-item p-category" rel="tag">Knowledge</a><span class="sep">, </span>
+    
+      <a href="/tags/#quiz" class="page__taxonomy-item p-category" rel="tag">Quiz</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#cs" class="page__taxonomy-item p-category" rel="tag">CS</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-07-25T00:00:00+09:00">2024-07-25</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=%5BCS%5D+Understanding+Asynchronous+Transfer+Mode+%28ATM%29+and+Asynchronous+Time-Division+Multiplexing+%28ATDM%29%20http%3A%2F%2Flocalhost%3A4000%2Fcs%2FATM%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fcs%2FATM%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/cs/ATM/" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/cs/vcdatagram/" class="pagination--pager" title="[CS] Understanding the Role of the Network Layer and Virtual Circuits&amp;Datagram
+">Previous</a>
+    
+    
+      <a href="/codingtest/CodingtestJavaPrint/" class="pagination--pager" title="[CodingTest] Printing a String in Java
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    
+<div class="page__related">
+  
+  <h2 class="page__related-title">You may also enjoy</h2>
+  <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/codingtest/CodingtestJavaPrint/" rel="permalink">[CodingTest] Printing a String in Java
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          7 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/cs/vcdatagram/" rel="permalink">[CS] Understanding the Role of the Network Layer and Virtual Circuits&amp;Datagram
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/cs/SQL/" rel="permalink">[CS] Frequently Used SQL syntax
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/cs/CSQuiz1/" rel="permalink">[CS] Understanding Packet Switching: Virtual Circuit and Datagram Methods with Quiz
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+    
+  </div>
+</div>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/maxkim77" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 <a href="http://localhost:4000">Max Note</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "http://localhost:4000/cs/ATM/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/cs/ATM"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://max-note.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+  </body>
+</html>
