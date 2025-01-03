@@ -11,13 +11,13 @@ toc: true
 # Solving Problem 11659: Prefix Sum for Range Queries
 
 ### Problem Description
-Given **N numbers**, the task is to efficiently calculate the sum of numbers from the \( i^{th} \) to the \( j^{th} \) index for multiple queries.
+Given **N numbers**, the task is to efficiently calculate the sum of numbers from the \(i^{th}\) to the \(j^{th}\) index for multiple queries.
 
 ### Constraints
-- \( 1 \leq N \leq 100,000 \)
-- \( 1 \leq M \leq 100,000 \)
-- \( 1 \leq i \leq j \leq N \)
-- The numbers are natural numbers (\( \leq 1000 \)).
+- **1 ≤ N ≤ 100,000**
+- **1 ≤ M ≤ 100,000**
+- **1 ≤ i ≤ j ≤ N**
+- The numbers are natural numbers (≤ 1000).
 
 ### Input Format
 1. The first line contains two integers, **N** (number of numbers) and **M** (number of queries).
@@ -25,7 +25,7 @@ Given **N numbers**, the task is to efficiently calculate the sum of numbers fro
 3. Each of the next **M lines** contains two integers **i** and **j**, representing the range for which the sum needs to be calculated.
 
 ### Output Format
-- For each query, output the sum of numbers from the \( i^{th} \) to the \( j^{th} \) index.
+For each query, output the sum of numbers from the \(i^{th}\) to the \(j^{th}\) index.
 
 ---
 
@@ -47,31 +47,31 @@ Given **N numbers**, the task is to efficiently calculate the sum of numbers fro
 ```
 
 #### Explanation
-1. Query 1: Sum of elements from index 1 to 3 = \( 5 + 4 + 3 = 12 \).
-2. Query 2: Sum of elements from index 2 to 4 = \( 4 + 3 + 2 = 9 \).
-3. Query 3: Sum of elements from index 5 to 5 = \( 1 \).
+1. Query 1: Sum of elements from index 1 to 3 = 5 + 4 + 3 = 12.
+2. Query 2: Sum of elements from index 2 to 4 = 4 + 3 + 2 = 9.
+3. Query 3: Sum of elements from index 5 to 5 = 1.
 
 ---
 
 ### Approach: Prefix Sum Technique
-To efficiently calculate the sum of any range \( i \) to \( j \), we use the **prefix sum array** technique.
+To efficiently calculate the sum of any range \(i\) to \(j\), we use the **prefix sum array** technique.
 
 #### Prefix Sum Formula:
-Let \( S[k] \) be the sum of the first \( k \) elements of the array.
+Let \(S[k]\) be the sum of the first \(k\) elements of the array.
 
-- \( S[k] = S[k-1] + A[k] \)
+- \(S[k] = S[k-1] + A[k]\)
 
-To calculate the sum of elements from index \( i \) to \( j \):
-- \( \text{Range Sum} = S[j] - S[i-1] \)
+To calculate the sum of elements from index \(i\) to \(j\):
+- \(	ext{Range Sum} = S[j] - S[i-1]\)
 
 #### Steps:
-1. Precompute the prefix sum array \( S \) such that \( S[k] \) contains the sum of the first \( k \) elements.
-2. For each query, use the formula \( S[j] - S[i-1] \) to calculate the sum in constant time \( O(1) \).
+1. Precompute the prefix sum array \(S\) such that \(S[k]\) contains the sum of the first \(k\) elements.
+2. For each query, use the formula \(S[j] - S[i-1]\) to calculate the sum in constant time \(O(1)\).
 
 #### Complexity:
-- **Prefix Sum Construction**: \( O(N) \)
-- **Query Handling**: \( O(1) \) per query
-- Total Complexity: \( O(N + M) \)
+- **Prefix Sum Construction**: \(O(N)\)
+- **Query Handling**: \(O(1)\) per query
+- **Total Complexity**: \(O(N + M)\)
 
 ---
 
@@ -110,14 +110,14 @@ public class P11659 {
 
 ### Explanation of the Code
 1. **Input Handling**:
-   - Read \( N \) (number of elements) and \( M \) (number of queries).
-   - Read the \( N \) numbers into a prefix sum array.
+   - Read \(N\) (number of elements) and \(M\) (number of queries).
+   - Read the \(N\) numbers into a prefix sum array.
 
 2. **Prefix Sum Array Construction**:
-   - \( S[i] = S[i-1] + A[i] \), where \( A[i] \) is the \( i^{th} \) element of the input.
+   - \(S[i] = S[i-1] + A[i]\), where \(A[i]\) is the \(i^{th}\) element of the input.
 
 3. **Query Processing**:
-   - For each query \( i, j \), calculate \( S[j] - S[i-1] \) to get the sum of elements from index \( i \) to \( j \).
+   - For each query \(i, j\), calculate \(S[j] - S[i-1]\) to get the sum of elements from index \(i\) to \(j\).
 
 4. **Output**:
    - Print the result for each query.
@@ -125,16 +125,16 @@ public class P11659 {
 ---
 
 ### Advantages of Prefix Sum
-1. Efficient Query Handling: Each query is handled in \( O(1) \) time, making it suitable for large inputs.
-2. Precomputation: Although we spend \( O(N) \) to construct the prefix sum array, this is a one-time cost that significantly speeds up query handling.
+1. **Efficient Query Handling**: Each query is handled in \(O(1)\) time, making it suitable for large inputs.
+2. **Precomputation**: Although we spend \(O(N)\) to construct the prefix sum array, this is a one-time cost that significantly speeds up query handling.
 
 ---
 
 ### Links
-- Problem Link: [Baekjoon 11659](https://www.acmicpc.net/problem/11659)
-- Source Code: [GitHub Repository](https://github.com/maxkim77/javaalgo)
+- **Problem Link**: [Baekjoon 11659](https://www.acmicpc.net/problem/11659)
+- **Source Code**: [GitHub Repository](https://github.com/maxkim77/javaalgo)
 
 ---
 
 ### Summary
-This solution efficiently calculates the sum of any range \( i \) to \( j \) using the prefix sum technique. With a time complexity of \( O(N + M) \), it is well-suited for large inputs and multiple queries.
+This solution efficiently calculates the sum of any range \(i\) to \(j\) using the prefix sum technique. With a time complexity of \(O(N + M)\), it is well-suited for large inputs and multiple queries.
