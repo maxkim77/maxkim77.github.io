@@ -11,7 +11,7 @@ toc: true
 # Solving Problem 11659: Prefix Sum for Range Queries
 
 ### Problem Description
-Given **N numbers**, the task is to efficiently calculate the sum of numbers from the \(i^{th}\) to the \(j^{th}\) index for multiple queries.
+Given **N numbers**, the task is to efficiently calculate the sum of numbers from the \(i^th\) to the \(j^th\) index for multiple queries.
 
 ### Constraints
 - **1 ≤ N ≤ 100,000**
@@ -25,7 +25,7 @@ Given **N numbers**, the task is to efficiently calculate the sum of numbers fro
 3. Each of the next **M lines** contains two integers **i** and **j**, representing the range for which the sum needs to be calculated.
 
 ### Output Format
-For each query, output the sum of numbers from the \(i^{th}\) to the \(j^{th}\) index.
+For each query, output the sum of numbers from the \(i^th\) to the \(j^th\) index.
 
 ---
 
