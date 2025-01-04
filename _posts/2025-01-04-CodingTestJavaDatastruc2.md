@@ -17,7 +17,7 @@ Given a sequence of **N integers**, the task is to **count how many of these num
 ### Constraints
 
 - **1 ≤ N ≤ 2000**
-- **|A_i| ≤ 1,000,000,000**
+- **A[i] ≤ 1,000,000,000**
 
 ### Input Format
 
@@ -34,13 +34,13 @@ Output a single integer, the count of "good numbers" in the array.
 
 #### Example 1
 
-**Input:**
+**Input**
 ```
 5
 1 2 3 4 5
 ```
 
-**Output:**
+**Output**
 ```
 3
 ```
@@ -187,3 +187,4 @@ public class P1253 {
 ### Links
 
 - **Problem Link**: [Baekjoon P1253](https://www.acmicpc.net/problem/1253)
+- **Source Code**: [GitHub Repository](https://github.com/maxkim77/javaalgo)
