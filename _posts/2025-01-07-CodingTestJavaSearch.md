@@ -35,7 +35,7 @@ Print a single integer, the number of connected components in the graph.
 
 #### Example 1
 
-**Input:**
+**Input**
 ```
 6 5
 1 2
@@ -45,19 +45,19 @@ Print a single integer, the number of connected components in the graph.
 4 6
 ```
 
-**Output:**
+**Output**
 ```
 2
 ```
 
 #### Explanation
-- There are two connected components:
+- There are two connected components
   - Component 1: {1, 2, 5}
   - Component 2: {3, 4, 6}
 
 #### Example 2
 
-**Input:**
+**Input**
 ```
 6 8
 1 2
@@ -70,7 +70,7 @@ Print a single integer, the number of connected components in the graph.
 2 3
 ```
 
-**Output:**
+**Output**
 ```
 1
 ```
@@ -210,17 +210,17 @@ END FUNCTION
 
 ### Explanation of the Code
 
-1. **Graph Representation:**
+1. **Graph Representation**
     - The graph is represented using an **adjacency list**, which is memory-efficient compared to an adjacency matrix for sparse graphs.
 
-2. **DFS Traversal:**
+2. **DFS Traversal**
     - The DFS function recursively visits all vertices in the current connected component.
     - The `visited` array ensures that each vertex is visited only once.
 
-3. **Counting Connected Components:**
+3. **Counting Connected Components**
     - For each unvisited vertex, we initiate a DFS traversal and increment the connected components count.
 
-4. **Output:**
+4. **Output**
     - The final count of connected components is printed.
 
 ---
@@ -238,7 +238,7 @@ END FUNCTION
 ```
 
 #### Steps:
-1. Build adjacency list:
+1. Build adjacency list
    - Vertex 1: [2, 5]
    - Vertex 2: [1, 5]
    - Vertex 3: [4]
@@ -246,7 +246,7 @@ END FUNCTION
    - Vertex 5: [1, 2]
    - Vertex 6: [4]
 
-2. Perform DFS:
+2. Perform DFS
    - Start at vertex 1, traverse {1, 2, 5} (Component 1).
    - Move to vertex 3, traverse {3, 4, 6} (Component 2).
 
