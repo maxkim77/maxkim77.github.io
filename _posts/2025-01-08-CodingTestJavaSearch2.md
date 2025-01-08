@@ -233,5 +233,5 @@ public class P1920 {
 
 ### Links
 
-- **Problem Link**: [Baekjoon P1260](https://www.acmicpc.net/problem/1260)
+- **Problem Link**: [Baekjoon P1920](https://www.acmicpc.net/problem/1920)
 - **Graph Traversal Reference**: [Wikipedia](https://en.wikipedia.org/wiki/Graph_traversal)
