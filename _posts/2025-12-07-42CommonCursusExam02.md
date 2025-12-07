@@ -4,7 +4,8 @@ title: "[42 Common Cursus Exam02] C: rev_wstr – Reverse Words in a String"
 categories: 42Exam
 tag: [C, 42, Exam, String, Algorithm]
 toc: true
----------
+---
+
 ![42Exam](/assets/images/2025-12-07-first/first.png)
 
 # 42 Exam02: `rev_wstr`
