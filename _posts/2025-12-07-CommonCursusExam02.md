@@ -6,9 +6,10 @@ tag: [C, 42, Exam, String, Algorithm]
 toc: true
 ---
 
+# 42 Exam02: `rev_wstr`
+
 ![42Exam](/assets/images/2025-12-07-first/first.png)
 
-# 42 Exam02: `rev_wstr`
 
 This post summarizes the classic **rev_wstr** problem from **42 Exam02**, one of the most common string‑manipulation exercises in the exam.
 It tests understanding of indexing, word boundaries, minimal library usage, and careful iteration using only `write`, `malloc`, and `free`.
