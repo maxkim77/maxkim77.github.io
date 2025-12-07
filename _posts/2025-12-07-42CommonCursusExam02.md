@@ -21,7 +21,6 @@ It tests understanding of indexing, word boundaries, minimal library usage, and 
 Assignment name  : rev_wstr
 Expected files   : rev_wstr.c
 Allowed functions: write, malloc, free
---------------------------------------------------------------------------------
 
 Write a program that takes a string as a parameter, and prints its words in
 reverse order.
@@ -49,7 +48,6 @@ $
 $>
 ```
 
----
 
 ## Requirements Summary
 
