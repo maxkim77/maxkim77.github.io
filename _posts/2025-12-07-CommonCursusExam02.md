@@ -13,7 +13,6 @@ toc: true
 This post summarizes the classic **rev_wstr** problem from **42 Exam02**, one of the most common string‑manipulation exercises in the exam.
 It tests understanding of indexing, word boundaries, minimal library usage, and careful iteration using only `write`, `malloc`, and `free`.
 
----
 
 ## Problem Description (Official Subject)
 
@@ -65,7 +64,6 @@ Example transformation:
 * Input: `"A B C"`
 * Output: `"C B A"`
 
----
 
 ## Example Inputs and Outputs
 
@@ -103,7 +101,6 @@ $
 
 No argument is given, so the program prints only a newline.
 
----
 
 ## Approach and Idea
 
@@ -125,7 +122,6 @@ Using `ft_strlen()` allows us to start from the last valid index of the string.
 
 This algorithm works in a **single pass from right to left** and does not require extra memory, which is perfect for exam constraints.
 
----
 
 ## Final C Implementation (Exam‑Ready)
 
@@ -184,7 +180,6 @@ int main(int argc, char **argv)
 }
 ```
 
----
 
 ## Notes and Common Pitfalls
 
@@ -199,7 +194,6 @@ int main(int argc, char **argv)
   * Do not use any other standard library functions (`printf`, `strlen`, etc.).
 * The subject guarantees no extra spaces at the beginning or end of the string in the tests, but the backward loop is robust enough to handle trailing spaces as well.
 
----
 
 ## Takeaways
 
@@ -210,7 +204,7 @@ int main(int argc, char **argv)
   * Edge‑case handling (no argument, single word, multiple words)
 * Once you are comfortable with this pattern, similar problems like `rostring` or other word‑rearranging exercises will feel much easier.
 
----
+
 
 That’s it for the **`rev_wstr`** write‑up.
 You can drop this file directly into your Jekyll blog as a post and use it as a reference before your next 42 Exam02 session.
