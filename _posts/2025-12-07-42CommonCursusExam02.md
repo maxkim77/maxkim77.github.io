@@ -1,5 +1,4 @@
 ---
-
 layout: single
 title: "[42 Common Cursus Exam02] C: rev_wstr – Reverse Words in a String"
 categories: 42Exam
